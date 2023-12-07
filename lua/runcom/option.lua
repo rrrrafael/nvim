@@ -1,9 +1,8 @@
-vim.cmd.colorscheme("quiet")
-
 vim.opt.number = true
 vim.opt.colorcolumn = "80"
 vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
+vim.opt.showmode = false
 
 vim.opt.shiftround = true
 
@@ -29,3 +28,4 @@ vim.opt.conceallevel = 3
 vim.opt.shortmess:append({ I = true })
 
 vim.opt.autowrite = true
+vim.cmd("colorscheme habamax")
