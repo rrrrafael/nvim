@@ -69,7 +69,7 @@ local conform = {
 local lazy = {
   "stevearc/conform.nvim",
   event = "BufWritePre",
-  cmd = { "ConformInfo" },
+  cmd = "ConformInfo",
   opts = conform.options,
   init = function()
     conform.autocmds()

@@ -47,9 +47,7 @@ local nvim_treesitter = {
 
 local lazy = {
   "nvim-treesitter/nvim-treesitter",
-  build = function()
-    require("nvim-treesitter.install").update({ with_sync = true })()
-  end,
+  build = ":TSUpdate",
   event = "VeryLazy",
   opts = nvim_treesitter.options,
   config = function(_, opts)
