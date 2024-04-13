@@ -1,10 +1,15 @@
 local mini_ai = {
+  options = {
+    silent = true,
+  },
+}
+local lazy = {
   "echasnovski/mini.ai",
   keys = {
     { "a", mode = { "x", "o" } },
     { "i", mode = { "x", "o" } },
   },
-  config = true,
+  opts = mini_ai.options,
 }
 
-return mini_ai
+return lazy
