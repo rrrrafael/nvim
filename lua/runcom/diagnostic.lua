@@ -1,4 +1,4 @@
--- vim.diagnostic.config({ virtual_text = false })
+vim.diagnostic.config({ virtual_text = false })
 
 -- keymaps
 local diagnostic_goto = function(next, severity)
