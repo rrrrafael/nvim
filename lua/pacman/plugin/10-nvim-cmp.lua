@@ -14,7 +14,7 @@ local nvim_cmp = {
       sources = require("cmp").config.sources({
         { name = "nvim_lsp" },
         { name = "path" },
-        { name = "buffer", keyword_length = 5 },
+        { name = "buffer" },
       }),
     }
   end,
