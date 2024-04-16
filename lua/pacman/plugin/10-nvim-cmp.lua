@@ -2,8 +2,8 @@ local nvim_cmp = {
   options = function()
     return {
       mapping = require("cmp").mapping.preset.insert({
-        ["<C-b>"] = require("cmp").mapping.scroll_docs(-4),
-        ["<C-f>"] = require("cmp").mapping.scroll_docs(4),
+        ["<C-u>"] = require("cmp").mapping.scroll_docs(-4),
+        ["<C-d>"] = require("cmp").mapping.scroll_docs(4),
         ["<C-e>"] = require("cmp").mapping.abort(),
         ["<C-y>"] = require("cmp").mapping.confirm({
           behavior = require("cmp").ConfirmBehavior.Insert,
