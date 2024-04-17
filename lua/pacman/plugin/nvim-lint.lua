@@ -9,6 +9,7 @@ local nvim_lint = {
 
   setup = function()
     require("lint").linters_by_ft = {
+      c = { "clangtidy" },
       javascript = { "biomejs" },
       json = { "biomejs" },
       php = { "phpcs", "phpstan" },
