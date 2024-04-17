@@ -81,8 +81,6 @@ local mason_tool_installer = {
       "prettier",
       "pylint",
       "ruff",
-      "shellcheck",
-      "shfmt",
       "stylua",
     },
   },
