@@ -39,12 +39,16 @@ local readline = augroup("ReadLine", { clear = true })
 autocmd("CmdLineEnter", {
   group = readline,
   callback = function()
-    vim.opt.iskeyword:append("-")
+    vim.opt_local.iskeyword:append("-")
   end,
 })
-autocmd({ "CmdLineLeave" }, {
-  group = readline,
+
+-- :terminal
+autocmd("TermOpen", {
+  group = augroup("Terminal", { clear = true }),
   callback = function()
-    vim.opt.iskeyword:remove("-")
+    vim.opt_local.signcolumn = "no"
+    vim.opt_local.number = false
+    -- vim.cmd("startinsert")
   end,
 })
