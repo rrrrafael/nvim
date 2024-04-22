@@ -1,6 +1,7 @@
 local conform = {
   options = {
     formatters_by_ft = {
+      c = { "clang-format" },
       css = { "prettier" },
       html = { "prettier" },
       javascript = { "biome" },
@@ -9,6 +10,7 @@ local conform = {
       markdown = { "prettier" },
       php = { { "prettier", "php-cs-fixer" } },
       python = { "ruff_fix", "ruff_format" },
+      rust = { "rustfmt" },
       sh = { "shfmt" },
       typescript = { "biome" },
     },
@@ -47,6 +49,8 @@ local conform = {
   end,
 
   user_commands = function()
+    vim.o.formatexpr = "v:lua.require('conform').formatexpr()"
+
     vim.api.nvim_create_user_command("Format", function(args)
       local range = nil
       if args.count ~= -1 then
